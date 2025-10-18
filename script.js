@@ -21,9 +21,10 @@ const material = new THREE.MeshBasicMaterial({ color: 0xff0040, transparent: tru
 const heart = new THREE.Mesh(geometry, material);
 scene.add(heart);
 
-heart.rotation.set(0, 0, 0); // ✅ жүректі тік қою
+heart.rotation.z = Math.PI; // ✅ жүректі тік қою
 heart.scale.set(0.2,0.2,0.2);
 heart.position.set(-2, -2, 0);
+
 
 camera.position.z = 15;
 
