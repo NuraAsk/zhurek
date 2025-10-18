@@ -5,27 +5,24 @@ const renderer = new THREE.WebGLRenderer({canvas: document.getElementById("bg"),
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
-// Heart shape
+// Heart shape (төңкерілгенді түзеттік)
 const x = 0, y = 0;
 const heartShape = new THREE.Shape();
-heartShape.moveTo(x + 5, y + 5);
-heartShape.bezierCurveTo(x + 5, y + 5, x + 4, y, x, y);
-heartShape.bezierCurveTo(x - 6, y, x - 6, y + 7, x - 6, y + 7);
-heartShape.bezierCurveTo(x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19);
-heartShape.bezierCurveTo(x + 13, y + 15.4, x + 16, y + 11, x + 16, y + 7);
-heartShape.bezierCurveTo(x + 16, y + 7, x + 16, y, x + 10, y);
-heartShape.bezierCurveTo(x + 7, y, x + 5, y + 5, x + 5, y + 5);
+heartShape.moveTo(x + 5, -(y + 5));
+heartShape.bezierCurveTo(x + 5, -(y + 5), x + 4, -y, x, -y);
+heartShape.bezierCurveTo(x - 6, -y, x - 6, -(y + 7), x - 6, -(y + 7));
+heartShape.bezierCurveTo(x - 6, -(y + 11), x - 3, -(y + 15.4), x + 5, -(y + 19));
+heartShape.bezierCurveTo(x + 13, -(y + 15.4), x + 16, -(y + 11), x + 16, -(y + 7));
+heartShape.bezierCurveTo(x + 16, -(y + 7), x + 16, -y, x + 10, -y);
+heartShape.bezierCurveTo(x + 7, -y, x + 5, -(y + 5), x + 5, -(y + 5));
 
 const geometry = new THREE.ShapeGeometry(heartShape);
 const material = new THREE.MeshBasicMaterial({ color: 0xff0040, transparent: true, opacity: 0.9 });
 const heart = new THREE.Mesh(geometry, material);
 scene.add(heart);
 
-heart.rotation.z = Math.PI; // ✅ жүректі тік қою
-heart.rotation.set(0, 0, 0);
 heart.scale.set(0.2,0.2,0.2);
 heart.position.set(-2, -2, 0);
-
 
 camera.position.z = 15;
 
