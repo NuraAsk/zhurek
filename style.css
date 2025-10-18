@@ -1,0 +1,32 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: radial-gradient(circle at center, #ff0066, #33001a);
+}
+
+#overlay {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+#overlay h1 {
+  font-size: 3em;
+  text-shadow: 0 0 20px #ff3399, 0 0 40px #ff66cc;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff3399, 0 0 20px #ff66cc; }
+  to { text-shadow: 0 0 30px #ff66cc, 0 0 60px #ff3399; }
+}
+
+canvas {
+  display: block;
+}
