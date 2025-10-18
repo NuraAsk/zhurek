@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love Animation</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nurkanat 💖</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: black; }
+    h1 {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-size: 2.5em;
+      color: #ff69b4;
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff1493;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff1493; }
+      to { text-shadow: 0 0 20px #fff, 0 0 40px #ff69b4; }
+    }
+    canvas { display: block; }
+  </style>
 </head>
 <body>
-  <div id="overlay">
-    <h1>Nurkanat 💖</h1>
-  </div>
+  <h1>Nurkanat 💖</h1>
   <canvas id="bg"></canvas>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
