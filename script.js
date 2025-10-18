@@ -22,7 +22,7 @@ const heart = new THREE.Mesh(geometry, material);
 scene.add(heart);
 
 heart.scale.set(0.2,0.2,0.2);
-heart.position.set(-2, -2, 0);
+heart.position.set(1, -2, 0);
 
 camera.position.z = 15;
 
